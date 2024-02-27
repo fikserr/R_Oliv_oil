@@ -1,0 +1,74 @@
+@import url("font.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle{
+    width: 316px;
+    height: 316px;
+    background-color: rgb(125, 160, 12);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -49px;
+}
+.nav__links{
+    display: flex;
+    justify-content: space-between;
+    gap: 88px;
+}
+.nav__link{
+    list-style: none;
+}
+.nav__link a{
+    text-decoration: none;
+    color: rgb(104, 136, 0);
+    font-family: var(--ElMessiri);
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+}
+.nav__basket{
+    display: flex;
+}
+.basket{
+    color: rgb(104, 136, 0);
+    font-size: 40px;
+}
+.nav__basket-number{
+    color: rgb(255, 255, 255);
+    font-family: var(--Roboto);
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.menu{
+    display: none;
+    color: rgb(104, 136, 0);
+    font-size: 40px;
+}
+.active{
+    width: 24px;
+    height: 24px;
+    background-color: rgb(215, 58, 49);
+    border-radius: 15px;
+}
+
