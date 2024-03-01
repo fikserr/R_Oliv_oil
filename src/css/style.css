@@ -72,3 +72,138 @@
     border-radius: 15px;
 }
 
+/* NAVBAR END */
+
+
+
+/* HEADER START */
+
+.header__content-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 694px;
+}
+.next, .back{
+    color: rgb(74, 74, 74);
+    font-size: 48px;
+    background: none;
+    border: none;
+}
+.header__content{
+    display: flex;
+    padding: 0 74px;
+}
+.header__imgs-left{
+    position: relative;
+}
+.oil__circle{
+    border-radius: 50%;
+    width: 481px;
+    height: 481px;
+    box-shadow: #9cc71154 0px 0px 0px 38px ;
+    background: linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
+}
+.header__img-oil{
+    position: absolute;
+    top: -143px;
+    left: 107px;
+    z-index: 3;
+}
+.header__img-fruit{
+    position: absolute;
+    top: 290px;
+    left: 223px;
+    z-index: 2;
+}
+.header__info-right{
+    padding: 0px 7px 0 127px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.product__title{
+    color: rgb(104, 136, 0);
+    font-family: var(--Amatic);
+    font-size: 36px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    padding-bottom: 33px;
+    }
+.header__btn{
+    display: flex;
+    gap: 40px;
+}
+.header__btn-txt{
+    color: var(--forsalat);
+    font-family: var(--Roboto);
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    width: 143px;
+    padding: 9px 16px;
+    border: 1px solid var(--forsalat);
+    background: none;
+    margin-bottom: 40px;
+}
+.actived{
+    background: var(--forsalat);
+    color: rgb(84, 107, 6);
+}
+.header__title{
+    color: rgb(74, 74, 74);
+    font-family: var(--Amatic);
+    font-size: 64px;
+    line-height: 80px;
+    text-align: left;
+    padding-bottom: 32px;
+}
+.header__text{
+    color: rgb(74, 74, 74);
+    font-family: var(--Roboto);
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    padding-bottom: 32px;
+    }
+.head__num{
+    display: flex;
+    gap: 25px;
+    align-items:center;
+}
+.minus, .plus{
+    width: 7px;
+    height: 32px;
+    padding: 0 16px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 8px;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 24px;
+    background: none;
+}
+.header__links-bottom{
+    padding-top: 32px;
+    display: flex;
+    gap: 40px;
+}
+.header__link{
+    width: 203px;
+    height: 48px;
+    padding: 8px 48px;
+    color: rgb(104, 136, 0);
+    font-family: var(--Roboto);
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid rgb(104, 136, 0);
+    border-radius: 50px;
+    transition: 1s;
+
+}
+.header__link:hover{
+    background: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
+    color: white;
+}
