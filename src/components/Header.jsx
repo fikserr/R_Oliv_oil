@@ -6,7 +6,12 @@ import Potato from "../img/image_12.png";
 import lagmon from "../img/image_16.png";
 import meat from "../img/image_14.png";
 import plov from "../img/image_15.png";
-import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+// import Context from "../context/Context";
+import { useState,  } from "react";
 
 
 const data = [
@@ -49,19 +54,20 @@ const data = [
 ]
 
 function Header() {
+  
+  const [basket,setBakset] = useState(0)
+  
   return (
     <header>
             <div className="container">
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+              {data.map(item => (
+                <SwiperSlide className="header__content-all" key={item.id}>
 
-            
-              {
-                data.map((item)=>{
-                  return <div className="header__content-all" key={item.id}>
-                        <button className="next"><MdNavigateBefore/></button>
                             <div className="header__content">
                                 
                                   <div className="header__imgs-left">
-                                    <div className="oil__circle"></div>
+                                    <div className={`oil__circle `}></div>
                                     <img src={item.oilImg} alt="" className="header__img-oil"/>
                                     <img src={item.fruit} alt="" className="header__img-fruit"/>
                                   </div>
@@ -70,33 +76,32 @@ function Header() {
                                   <div className="header__info-right">
                                     <h2 className="product__title">{item.productTitle}</h2>
                                       <div className="header__btn">
-                                          <button className="header__btn-txt actived">Для салата</button>
-                                          <button className="header__btn-txt ">Итальянское</button>
-                                          <button className="header__btn-txt ">Для мяса</button>
-                                          <button className="header__btn-txt ">Восточное</button>
+                                          <button className={`header__btn-txt ${item.id == 1 ? "actived" : ""}`}>Для салата</button>
+                                          <button className={`header__btn-txt ${item.id == 2 ? "actived" : ""}`}>Итальянское</button>
+                                          <button className={`header__btn-txt ${item.id == 3 ? "actived" : ""}`}>Для мяса</button>
+                                          <button className={`header__btn-txt ${item.id == 4 ? "actived" : ""}`}>Восточное</button>
                                       </div>
                                     <h1 className="header__title">{item.title}</h1>
                                     <p className="header__text">{item.text}</p>
                                     
                                           <div className="head__num">
-                                            <button className="minus">-</button>
-                                              <div className="num">0</div>
-                                            <button className="plus">+</button>
+                                            <button className="minus" onClick={()=>setBasket() }>-</button>
+                                              <div className="num">{basket}</div>
+                                            <button className="plus" onClick={()=>setBasket() }>+</button>
                                           </div>
 
                                     <div className="header__links-bottom">
-                                      <button className="header__link"><a href="">ПОДРОБНЕЕ</a></button>
-                                      <button className="header__link"><a href="">В КОРЗИНУ</a></button>
+                                      <button className="header__link">ПОДРОБНЕ</button>
+                                      <button className="header__link">В КОРЗИНУ</button>
                                     </div>
                                   </div>
                                   
                             </div>
-                        <button className="back"><MdNavigateNext/></button>
 
-                          </div>
-  
-                })
-              }
+                </SwiperSlide>
+              ))}
+            </Swiper>
+        
 
 
 

@@ -15,6 +15,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 267px;
+    background:transparent;
+
 }
 .circle{
     width: 316px;
@@ -83,6 +86,7 @@
     justify-content: center;
     align-items: center;
     height: 694px;
+    
 }
 .next, .back{
     color: rgb(74, 74, 74);
@@ -92,7 +96,11 @@
 }
 .header__content{
     display: flex;
-    padding: 0 74px;
+    padding: 0 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .header__imgs-left{
     position: relative;
@@ -106,9 +114,10 @@
 }
 .header__img-oil{
     position: absolute;
-    top: -143px;
+    top: -115px;
     left: 107px;
     z-index: 3;
+    height: 640px;
 }
 .header__img-fruit{
     position: absolute;
@@ -188,21 +197,24 @@
     padding-top: 32px;
     display: flex;
     gap: 40px;
+
 }
 .header__link{
     width: 203px;
     height: 48px;
-    padding: 8px 48px;
-    color: rgb(104, 136, 0);
+    padding: 8px 48px; 
+    border: 1px solid rgb(104, 136, 0);
+    border-radius: 50px;
     font-family: var(--Roboto);
     font-size: 18px;
     line-height: 32px;
     text-align: center;
-    border: 1px solid rgb(104, 136, 0);
-    border-radius: 50px;
+    color: rgb(104, 136, 0);
+    background: white;
     transition: 1s;
 
 }
+
 .header__link:hover{
     background: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
     color: white;

@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import Logo from "../img/logo.png"
 import { BsBasket } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
+import Context from "../context/Context";
 
 function Navbar() {
+    const {basket} = useContext(Context)
   return (
             <nav className="navbar">
                 <div className="container">
+
+                    
 
                         <div className="nav__content">
                             <div className="circle"><img src={Logo} alt="image" className="circle__logo"/></div>
@@ -26,7 +31,7 @@ function Navbar() {
                                                 </div>
                                             <div>
                                                 <div className="basket"><BsBasket/></div>
-                                                <div className="nav__basket-number "></div>
+                                                <div className="nav__basket-number actived">{basket}</div>
                                             </div>
                                         </div>
 
