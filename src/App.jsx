@@ -1,22 +1,23 @@
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import './css/style.css';
-import './css/media.css';
 import Oilsection from './components/Oilsection';
-// import ContextProvider from "./context/Context"
+import ContextProvider from './context/Context';
+import './css/style.css';
+
+
 
 
 function App() {
 
 
   return (
-    <div>
-      {/* < Navbar/> */}
+    <ContextProvider>
+      < Navbar/> 
       < Header/>
       < Oilsection/>
       < Footer/>
-    </div>
+    </ContextProvider>
   )
 }
 

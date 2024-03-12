@@ -48,31 +48,36 @@
 }
 .nav__basket{
     display: flex;
+    position: relative;
+   
 }
 .basket{
     color: rgb(104, 136, 0);
     font-size: 40px;
 }
 .nav__basket-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(255, 255, 255);
     font-family: var(--Roboto);
     font-size: 16px;
     line-height: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    position: absolute;
+    top: -15px;
+    right: 0;
 }
 .menu{
     display: none;
     color: rgb(104, 136, 0);
     font-size: 40px;
 }
-.active{
+.nav__basket .actived{
     width: 24px;
     height: 24px;
     background-color: rgb(215, 58, 49);
     border-radius: 15px;
+    color: white;
 }
 
 /* NAVBAR END */
@@ -109,8 +114,24 @@
     border-radius: 50%;
     width: 481px;
     height: 481px;
+    transition: 0.5s    ;
+}
+.idone{
     box-shadow: #9cc71154 0px 0px 0px 38px ;
     background: linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
+}
+.idtwo{
+    box-shadow:  0px 0px 0px 38px rgba(1, 250, 122, 0.322);
+    background: linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
+}
+.idthree{
+    box-shadow: 0px 0px 0px 38px rgba(245, 15, 3, 0.315);
+    background: linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
+}
+.idfour{
+    background: linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%);
+    box-shadow:  0px 0px 0px 38px rgba(255, 132, 0, 0.404);
+    color: #BA6400;
 }
 .header__img-oil{
     position: absolute;
@@ -144,7 +165,7 @@
     gap: 40px;
 }
 .header__btn-txt{
-    color: var(--forsalat);
+    
     font-family: var(--Roboto);
     font-size: 18px;
     line-height: 24px;

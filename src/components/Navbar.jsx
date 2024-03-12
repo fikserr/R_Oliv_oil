@@ -2,7 +2,8 @@ import { useContext } from "react";
 import Logo from "../img/logo.png"
 import { BsBasket } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
-import Context from "../context/Context";
+import { Context } from "../context/Context";
+
 
 function Navbar() {
     const {basket} = useContext(Context)
@@ -31,8 +32,8 @@ function Navbar() {
                                                 </div>
                                             <div>
                                                 <div className="basket"><BsBasket/></div>
-                                                <div className="nav__basket-number actived">{basket}</div>
-                                            </div>
+                                                <div className={`nav__basket-number ${basket > 0 ? "actived" : ""}`}>{basket}</div>
+                                                </div>
                                         </div>
 
                         </div>
