@@ -12,13 +12,13 @@ import { Context } from "../context/Context";
 
 function Header() {
   
-  const {basket,data,updateBasket,color} = useContext(Context)
+  const {totalCount,basket} = useContext(Context)
   
   return (
     <header>
             <div className="container">
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-              {data.map(item => (
+              {basket.map(item => (
                 <SwiperSlide className="header__content-all" key={item.id}>
 
                             <div className="header__content">
@@ -29,7 +29,7 @@ function Header() {
                                     <img src={item.fruit} alt="" className="header__img-fruit"/>
                                   </div>
 
-
+ 
                                   <div className="header__info-right">
                                     <h2 className="product__title">{item.productTitle}</h2>
                                       <div className="header__btn">
@@ -42,9 +42,9 @@ function Header() {
                                     <p className="header__text">{item.text}</p>
                                     
                                           <div className="head__num">
-                                            <button className="minus" onClick={() => updateBasket("-")}>-</button>
-                                              <div className="num">{basket}</div>
-                                            <button className="plus" onClick={() => updateBasket("+")}>+</button>
+                                            <button className="minus" onClick={() => totalCount("-", item.id,item.count)}>-</button>
+                                              <div className="num">{item.count}</div>
+                                            <button className="plus" onClick={() => totalCount("+", item.id,item.count)}>+</button>
                                           </div>
 
                                     <div className="header__links-bottom">

@@ -20,7 +20,8 @@ export const data = [
     text: "Название говорит само за себя. Это идеальная заправка, которая даже скучной и привычной капусте придаст неповторимый вкус и аромат. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000"
+    currency: "115 000",
+    count: 0
   },
   {
     id:2,
@@ -31,7 +32,8 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000"
+    currency: "115 000",
+    count: 0
   },
   {
     id:3,
@@ -42,7 +44,8 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000"
+    currency: "115 000",
+    count: 0
   },
   {
     id:4,
@@ -53,25 +56,44 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000"
+    currency: "115 000",
+    count: 0
   }
 ]
 
 function ContextProvider({children}) {    
-    const [basket,setBasket] = useState(0)
-    const updateBasket = (operation) => {
+  let arrayJSON = JSON.stringify(data);
+  localStorage.setItem('myArray', arrayJSON);
+  const [basket, setBasket] = useState(data);
+  const [sonlar,setSonlar] = useState(0)
+
+  
+  function totalCount(operation, itemId) {
+    let updatedArray = basket.map(item => {
       if (operation === "+") {
-        setBasket(basket + 1);
+        if (item.id === itemId) {
+          return { ...item, count: item.count + 1 };
+        }
       } else if (operation === "-") {
-        if (basket > 0) {
-          setBasket(basket - 1);
+        if (item.id === itemId && item.count > 0) {
+          return { ...item, count: item.count - 1 };
         }
       }
-    };
+      return item;
+    });
+    setBasket(updatedArray);
+    let updatedArrayJSON = JSON.stringify(updatedArray);
+    localStorage.setItem('myArray', updatedArrayJSON);
+    let total = updatedArray.reduce((acc, item) => acc + item.count, 0)
+     setSonlar(total)
+      console.log(sonlar);
+  }
+  
+    
   
 
   return (
-    <Context.Provider value={{basket,setBasket,data,updateBasket}}>
+    <Context.Provider value={{sonlar,basket,setBasket,data,totalCount}}>
         {children}
     </Context.Provider>
   )

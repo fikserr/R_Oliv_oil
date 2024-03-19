@@ -6,7 +6,7 @@ import { Context } from "../context/Context";
 
 
 function Navbar() {
-    const {basket} = useContext(Context)
+    const {sonlar} = useContext(Context)
   return (
             <nav className="navbar">
                 <div className="container">
@@ -32,7 +32,7 @@ function Navbar() {
                                                 </div>
                                             <div>
                                                 <div className="basket"><BsBasket/></div>
-                                                <div className={`nav__basket-number ${basket > 0 ? "actived" : ""}`}>{basket}</div>
+                                                <div className={`nav__basket-number ${sonlar > 0 ? "actived" : ""}`}>{sonlar}</div>
                                                 </div>
                                         </div>
 
