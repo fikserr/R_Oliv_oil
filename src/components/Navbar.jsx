@@ -3,6 +3,7 @@ import Logo from "../img/logo.png"
 import { BsBasket } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import { Context } from "../context/Context";
+import {  NavLink } from "react-router-dom"
 
 
 function Navbar() {
@@ -13,17 +14,17 @@ function Navbar() {
 
                     
 
-                        <div className="nav__content">
-                            <div className="circle"><img src={Logo} alt="image" className="circle__logo"/></div>
+                        <div className="nav">
+                            <NavLink to="/" className="nav__circle"><img src={Logo} alt="image" className="nav__circle-logo"/></NavLink>
                             
-                                <ul className="nav__links">
-                                    <li className="nav__link"><a href="sec__oil">Масло</a></li>
-                                    <li className="nav__link"><a href="about">О нас</a></li>
-                                    <li className="nav__link"><a href="">Отзывы</a></li>
-                                    <li className="nav__link"><a href="">Оплата и доставка</a></li>
-                                    <li className="nav__link"><a href="">Контакты</a></li>
-                                        
-                                </ul>   
+                                <div className="nav__links">
+
+                                    <NavLink to="/oilcard" className="nav__link">Масло</NavLink>
+                                    <NavLink to="/about" className="nav__link">О нас</NavLink>
+                                    <NavLink to="/reviews" className="nav__link">Отзывы</NavLink>
+                                    <NavLink to="/paymentDelivery" className="nav__link">Оплата и доставка</NavLink>
+                                    <NavLink to="/contact" className="nav__link">Контакты</NavLink>
+                                </div>
                                         
 
                                         <div className="nav__basket">
@@ -31,10 +32,10 @@ function Navbar() {
                                                     <div><IoMenu /></div>
                                                 </div>
                                             <div>
-                                                <div className="basket"><BsBasket/></div>
-                                                <div className={`nav__basket-number ${sonlar > 0 ? "actived" : ""}`}>{sonlar}</div>
+                                                <p className="basket"><BsBasket/></p>
+                                                <div className={`basket__number ${sonlar > 0 ? "active" : ""}`}>{sonlar}</div>
                                                 </div>
-                                        </div>
+                                            </div>
 
                         </div>
 
