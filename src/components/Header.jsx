@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import { useContext } from "react";
+import { useContext} from "react";
 import { Context } from "../context/Context";
 
 
@@ -12,15 +12,22 @@ import { Context } from "../context/Context";
 function Header() {
   
   const {totalCount,basket} = useContext(Context)
+
+
+  
   
   return (
     <header>
             <div className="container">
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
               {basket.map(item => (
-                <SwiperSlide className="header" key={item.id}>
+                <SwiperSlide className="header" key={item.id} >
+                 
 
-                            <div className="header__content">
+              
+                
+
+                            <div className="header__content" >
                                 
                                   <div className="header__imgs-left">
                                     <div className="oil__circle" ><img src={item.oilImg} alt="" className="header__img-oil"/></div>
@@ -41,9 +48,9 @@ function Header() {
                                     <p className="header__text">{item.text}</p>
                                     
                                           <div className="header__num">
-                                            <button className="minus" onClick={() => totalCount("-", item.id,item.count)}>-</button>
+                                            <button className="minus" onClick={() => totalCount("-", item.id)}>-</button>
                                               <div className="num">{item.count}</div>
-                                            <button className="plus" onClick={() => totalCount("+", item.id,item.count)}>+</button>
+                                            <button className="plus" onClick={() => totalCount("+", item.id)}>+</button>
                                           </div>
 
                                     <div className="header__links-bottom">
@@ -53,7 +60,8 @@ function Header() {
                                   </div>
                                   
                             </div>
-
+                           
+                           
                 </SwiperSlide>
               ))}
             </Swiper>

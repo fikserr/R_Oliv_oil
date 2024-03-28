@@ -2,13 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=El+Messiri:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root[data-theme="light"]{
+:root[data-theme="idone"]{
     --Roboto: "Roboto";
     --Amatic: "AmaticSC";
     --ElMessiri: "ElMessiri";
-    
+    --circleShadow:  #9cc71154;
+    --circleBack:  linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
+    --productTitle: rgb(104, 136, 0);
+    --buttonTxt:  rgb(191, 208, 135);
+    --activeButton: rgb(84, 107, 6);
+    --num: rgb(104, 136, 0);
+    --hoverLink: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
 }
 
+:root[data-theme="idtwo"]{
+    --Roboto: "Roboto";
+    --Amatic: "AmaticSC";
+    --ElMessiri: "ElMessiri";
+    --circleShadow:  rgba(1, 250, 122, 0.322);
+    --circleBack:  linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
+}
+
+
+.idthree{
+    box-shadow: 0px 0px 0px 38px rgba(245, 15, 3, 0.315);
+    background: linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
+}
+.idfour{
+    background: linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%);
+    box-shadow:  0px 0px 0px 38px rgba(255, 132, 0, 0.404);
+
+}
 
 *{
     margin: 0;
@@ -126,8 +150,8 @@
             width: 481px;
             height: 481px;
             transition: 0.5s;
-            box-shadow: #9cc71154 0px 0px 0px 38px ;
-            background: linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
+            box-shadow: var(--circleShadow) 0px 0px 0px 38px ;
+            background: var(--circleBack);
         }
         .header__img-oil{
             position: absolute;
@@ -151,7 +175,7 @@
         display: flex;
         flex-direction: column;
         .product__title{
-            color: rgb(104, 136, 0);
+            color: var(--productTitle);
             font-family: Amatic SC;
             font-size: 36px;
             font-weight: 700;
@@ -166,7 +190,7 @@
         display: flex;
         gap: 40px;
         .header__btn-txt{
-            color: rgb(191, 208, 135);
+            color: var(--buttonTxt);
             font-family: Roboto;
             font-size: 18px;
             font-weight: 400;
@@ -174,12 +198,12 @@
             letter-spacing: 0%;
             text-align: center;
             padding: 9px 16px;
-            border: 1px solid rgb(191, 208, 135);
+            border: 1px solid var(--buttonTxt);
             background: none;
             margin-bottom: 40px;
             &.active{
-                background: rgb(191, 208, 135);
-                color: rgb(84, 107, 6);
+                background: var(--buttonTxt);
+                color: var(--activeButton);
             }
         }
     }
@@ -209,7 +233,7 @@
         gap: 25px;
         align-items:center;
         .num{
-            color: rgb(104, 136, 0);
+            color: var(--num);
             font-family: Roboto;
             font-size: 24px;
             font-weight: 500;
@@ -240,9 +264,9 @@
             width: 203px;
             height: 48px;
             padding: 8px 48px; 
-            border: 1px solid rgb(104, 136, 0);
+            border: 1px solid var(--productTitle);
             border-radius: 50px;
-            color: rgb(104, 136, 0);
+            color: var(--productTitle);
             font-family: Roboto;
             font-size: 18px;
             font-weight: 500;
@@ -252,7 +276,7 @@
             background: white;
             transition: 0.5s;
            &:hover{
-            background: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
+            background: var(--hoverLink);
             color: white;
            }
         
@@ -267,23 +291,7 @@
 
 
 
-.idone{
-    box-shadow: #9cc71154 0px 0px 0px 38px ;
-    background: linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
-}
-.idtwo{
-    box-shadow:  0px 0px 0px 38px rgba(1, 250, 122, 0.322);
-    background: linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
-}
-.idthree{
-    box-shadow: 0px 0px 0px 38px rgba(245, 15, 3, 0.315);
-    background: linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
-}
-.idfour{
-    background: linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%);
-    box-shadow:  0px 0px 0px 38px rgba(255, 132, 0, 0.404);
-    color: #BA6400;
-}
+
 
 
 

@@ -66,6 +66,7 @@ function ContextProvider({children}) {
   localStorage.setItem('myArray', arrayJSON);
   const [basket, setBasket] = useState(data);
   const [sonlar,setSonlar] = useState(0)
+  const [color,SetColor] = useState(1)
 
   
   function totalCount(operation, itemId) {
@@ -79,21 +80,39 @@ function ContextProvider({children}) {
           return { ...item, count: item.count - 1 };
         }
       }
+      
       return item;
     });
+
+
     setBasket(updatedArray);
     let updatedArrayJSON = JSON.stringify(updatedArray);
     localStorage.setItem('myArray', updatedArrayJSON);
     let total = updatedArray.reduce((acc, item) => acc + item.count, 0)
      setSonlar(total)
-      console.log(sonlar);
+    
   }
+
+
+  if (itemId == 1) {
+    document.documentElement.dataset.theme = "idone"
+  }else if (color == 2) {
+    document.documentElement.dataset.theme = "idtwo"
+  }else if (color == 3) {
+    document.documentElement.dataset.theme = "idthree"
+  }else if (color == 4) {
+    document.documentElement.dataset.theme = "idfour"
+  }else{
+    return console.log(color);
+  }
+
+    
   
     
   
 
   return (
-    <Context.Provider value={{sonlar,basket,setBasket,data,totalCount}}>
+    <Context.Provider value={{sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
         {children}
     </Context.Provider>
   )
