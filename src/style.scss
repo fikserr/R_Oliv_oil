@@ -21,17 +21,37 @@
     --ElMessiri: "ElMessiri";
     --circleShadow:  rgba(1, 250, 122, 0.322);
     --circleBack:  linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
+    --productTitle: rgb(0, 146, 70);
+    --buttonTxt:  rgb(105, 212, 158);
+    --activeButton: rgb(17, 97, 55);
+    --num: rgb(0, 146, 70);
+    --hoverLink: linear-gradient(-39.42deg, rgb(7, 101, 52) 14.554%,rgb(0, 219, 105) 75.337%);
 }
 
-
-.idthree{
-    box-shadow: 0px 0px 0px 38px rgba(245, 15, 3, 0.315);
-    background: linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
+:root[data-theme="idthree"]{
+    --Roboto: "Roboto";
+    --Amatic: "AmaticSC";
+    --ElMessiri: "ElMessiri";
+    --circleShadow:  rgba(245, 15, 3, 0.315);
+    --circleBack:  linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
+    --productTitle: rgb(215, 58, 49);
+    --buttonTxt: rgb(115, 18, 13);
+    --activeButton:rgb(232, 132, 126);
+    --num: rgb(215, 58, 49);
+    --hoverLink:linear-gradient(-38.95deg, rgb(153, 22, 14) 14.558%,rgb(232, 66, 57) 74.038%);
 }
-.idfour{
-    background: linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%);
-    box-shadow:  0px 0px 0px 38px rgba(255, 132, 0, 0.404);
 
+:root[data-theme="idfour"]{
+    --Roboto: "Roboto";
+    --Amatic: "AmaticSC";
+    --ElMessiri: "ElMessiri";
+    --circleShadow: rgba(255, 132, 0, 0.404);
+    --circleBack:   linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%)  ;
+    --productTitle: rgb(230, 127, 16);
+    --buttonTxt: rgb(241, 167, 87);
+    --activeButton:rgb(189, 105, 13);
+    --num: rgb(230, 127, 16);
+    --hoverLink: linear-gradient(-35.60deg, rgb(186, 100, 0) 17.905%,rgb(255, 157, 52) 77.509%);
 }
 
 *{
@@ -101,11 +121,13 @@
             }
         }
 
-        .basket{
+        .basket__right{
             color: rgb(104, 136, 0);
             font-size: 40px;
 
-            &__number{
+            
+        }
+        .basket__number{
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -124,7 +146,6 @@
                     color: white;
                 }
             }
-        }
     }
 
 }
@@ -135,6 +156,8 @@
     justify-content: center;
     align-items: center;
     height: 694px;
+    transition: 0.5s;
+
     &__content{
         display: flex;
         padding: 0 100px;
@@ -152,6 +175,7 @@
             transition: 0.5s;
             box-shadow: var(--circleShadow) 0px 0px 0px 38px ;
             background: var(--circleBack);
+            transition: 0.5s;
         }
         .header__img-oil{
             position: absolute;
@@ -162,7 +186,7 @@
         }
         .header__img-fruit{
             position: absolute;
-            top: 290px;
+            top: 250px;
             left: 223px;
             z-index: 2;
         }
@@ -282,6 +306,109 @@
         
         }
     }
+
+ 
+
+
+}
+
+.basket{
+  
+    background: white;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    width: 1102px;
+    height: 1186px;
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        color: rgb(74, 74, 74);
+        font-family: Amatic SC;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+    &__close{
+        font-size: 30px;
+        color: rgb(104, 136, 0);
+    }   
+
+    &__products{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
+        .products__name-liter{
+            display: none;
+            gap: 16px;
+          
+            &.active{
+                display: flex;
+            }
+            .products__name{
+                color: rgb(104, 136, 0);
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+            .products__liter{
+                color: rgb(74, 74, 74);
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 14px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+        }
+        .product{
+            display: none;
+            justify-content: space-between;
+            align-items: center ;
+            width: 100%;
+            height: 154px;
+            padding: 16px 0;
+            &.active{
+                display: flex;
+            }
+            &__img{
+                width: 50px;
+            }
+            &__price{
+                display: flex;
+                justify-content: center;
+                gap: 32px;
+                align-items:center;
+                
+            }
+            &__price-total{
+                color: rgb(104, 136, 0);
+                font-family: Roboto;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 170.23%;
+                letter-spacing: 0%;
+                text-align: right;
+            }
+            &__close{
+                font-size: 25px;
+                color: rgb(148, 148, 148);
+            }
+        }
+        
+
+    }
+
 
 }
 

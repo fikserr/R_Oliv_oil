@@ -32,7 +32,7 @@ function Navbar() {
                                                     <div><IoMenu /></div>
                                                 </div>
                                             <div>
-                                                <p className="basket"><BsBasket/></p>
+                                                <p className="basket__right"><BsBasket/></p>
                                                 <div className={`basket__number ${sonlar > 0 ? "active" : ""}`}>{sonlar}</div>
                                                 </div>
                                             </div>

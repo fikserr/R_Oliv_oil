@@ -67,6 +67,7 @@ function ContextProvider({children}) {
   const [basket, setBasket] = useState(data);
   const [sonlar,setSonlar] = useState(0)
   const [color,SetColor] = useState(1)
+  
 
   
   function totalCount(operation, itemId) {
@@ -84,6 +85,8 @@ function ContextProvider({children}) {
       return item;
     });
 
+    
+
 
     setBasket(updatedArray);
     let updatedArrayJSON = JSON.stringify(updatedArray);
@@ -91,25 +94,23 @@ function ContextProvider({children}) {
     let total = updatedArray.reduce((acc, item) => acc + item.count, 0)
      setSonlar(total)
     
+     
+    
   }
 
-
-  if (itemId == 1) {
+  if (color === 1) {
     document.documentElement.dataset.theme = "idone"
-  }else if (color == 2) {
+  }else if (color === 2) {
     document.documentElement.dataset.theme = "idtwo"
-  }else if (color == 3) {
+  }else if (color === 3) {
     document.documentElement.dataset.theme = "idthree"
-  }else if (color == 4) {
+  }else if (color === 4) {
     document.documentElement.dataset.theme = "idfour"
-  }else{
-    return console.log(color);
   }
 
-    
-  
-    
-  
+ 
+
+
 
   return (
     <Context.Provider value={{sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
