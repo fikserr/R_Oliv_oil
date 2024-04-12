@@ -7,7 +7,7 @@ import {  NavLink } from "react-router-dom"
 
 
 function Navbar() {
-    const {sonlar} = useContext(Context)
+    const {sonlar,setActive} = useContext(Context)
   return (
             <nav className="navbar">
                 <div className="container">
@@ -27,7 +27,7 @@ function Navbar() {
                                 </div>
                                         
 
-                                        <div className="nav__basket">
+                                        <div className="nav__basket" onClick={()=> setActive(true)}>
                                                 <div className="menu">
                                                     <div><IoMenu /></div>
                                                 </div>

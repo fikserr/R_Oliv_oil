@@ -149,7 +149,9 @@
     }
 
 }
-
+header{
+    position: relative;
+}
 
 .header{
     display: flex;
@@ -312,6 +314,22 @@
 
 }
 
+.basket__hover{
+    backdrop-filter: blur(25px);
+    background: rgba(21, 24, 21, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    &.active{
+        display: flex;
+    }
+    
+}
 .basket{
   
     background: white;
@@ -337,6 +355,8 @@
     &__close{
         font-size: 30px;
         color: rgb(104, 136, 0);
+        background: transparent;
+        border: none;
     }   
 
     &__products{
@@ -403,6 +423,8 @@
             &__close{
                 font-size: 25px;
                 color: rgb(148, 148, 148);
+                background: transparent;
+                border: none;
             }
         }
         

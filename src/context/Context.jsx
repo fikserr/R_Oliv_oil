@@ -67,6 +67,7 @@ function ContextProvider({children}) {
   const [basket, setBasket] = useState(data);
   const [sonlar,setSonlar] = useState(0)
   const [color,SetColor] = useState(1)
+  const [active,setActive] = useState(false)
   
 
   
@@ -113,7 +114,7 @@ function ContextProvider({children}) {
 
 
   return (
-    <Context.Provider value={{sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
+    <Context.Provider value={{active,setActive,sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
         {children}
     </Context.Provider>
   )
