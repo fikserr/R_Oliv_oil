@@ -27,7 +27,7 @@ function Navbar() {
                                 </div>
                                         
 
-                                        <div className="nav__basket" onClick={()=> setActive(true)}>
+                                        <div className="nav__basket" onClick={()=>setActive(true) }>
                                                 <div className="menu">
                                                     <div><IoMenu /></div>
                                                 </div>

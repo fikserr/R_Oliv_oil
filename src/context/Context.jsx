@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import salat from "../img/dlia_salata.png";
 import italianskoe from "../img/italianskoe.png";
 import forMeat from "../img/dlia_myasa.png";
@@ -20,8 +20,10 @@ export const data = [
     text: "Название говорит само за себя. Это идеальная заправка, которая даже скучной и привычной капусте придаст неповторимый вкус и аромат. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000",
-    count: 0
+    currency: 115,
+    count: 0,
+    totalCurrency: 0,
+    
   },
   {
     id:2,
@@ -32,8 +34,9 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000",
-    count: 0
+    currency: 115 ,
+    count: 0,
+    totalCurrency: 0,
   },
   {
     id:3,
@@ -44,8 +47,9 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000",
-    count: 0
+    currency: 115 ,
+    count: 0,
+    totalCurrency: 0,
   },
   {
     id:4,
@@ -56,8 +60,9 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: "115 000",
-    count: 0
+    currency: 115 ,
+    count: 0,
+    totalCurrency: 0,
   }
 ]
 
@@ -68,14 +73,16 @@ function ContextProvider({children}) {
   const [sonlar,setSonlar] = useState(0)
   const [color,SetColor] = useState(1)
   const [active,setActive] = useState(false)
-  
+
 
   
   function totalCount(operation, itemId) {
     let updatedArray = basket.map(item => {
       if (operation === "+") {
+        
         if (item.id === itemId) {
           return { ...item, count: item.count + 1 };
+          
         }
       } else if (operation === "-") {
         if (item.id === itemId && item.count > 0) {
@@ -86,6 +93,11 @@ function ContextProvider({children}) {
       return item;
     });
 
+   
+
+      
+    
+  
     
 
 
@@ -98,6 +110,7 @@ function ContextProvider({children}) {
      
     
   }
+  console.log(basket);
 
   if (color === 1) {
     document.documentElement.dataset.theme = "idone"
@@ -108,13 +121,23 @@ function ContextProvider({children}) {
   }else if (color === 4) {
     document.documentElement.dataset.theme = "idfour"
   }
+  
 
- 
 
+  function clearNumber(itemId) {
+    basket.map(item => {
+        if (item.id === itemId) {
+            return { ...item, count: item.count = 0 };
+          }
+    }
+        )
+        totalCount()
+    } 
+    
 
 
   return (
-    <Context.Provider value={{active,setActive,sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
+    <Context.Provider value={{clearNumber,active,setActive,sonlar,basket,setBasket,data,totalCount,color,SetColor}}>
         {children}
     </Context.Provider>
   )
