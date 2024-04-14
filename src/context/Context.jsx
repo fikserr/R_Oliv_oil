@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import salat from "../img/dlia_salata.png";
 import italianskoe from "../img/italianskoe.png";
 import forMeat from "../img/dlia_myasa.png";
@@ -7,6 +7,11 @@ import Potato from "../img/image_12.png";
 import lagmon from "../img/image_16.png";
 import meat from "../img/image_14.png";
 import plov from "../img/image_15.png";
+import oneSalat from "../img/dlia.png"
+import italian from "../img/italian.png"
+import myasa from "../img/myasa.png"
+import vostoch from "../img/vostoch.png"
+
 
 export const Context = createContext()
 
@@ -20,10 +25,10 @@ export const data = [
     text: "Название говорит само за себя. Это идеальная заправка, которая даже скучной и привычной капусте придаст неповторимый вкус и аромат. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: 115,
+    currency: 115 ,
     count: 0,
     totalCurrency: 0,
-    
+    littleImg: oneSalat,
   },
   {
     id:2,
@@ -37,6 +42,7 @@ export const data = [
     currency: 115 ,
     count: 0,
     totalCurrency: 0,
+    littleImg: italian,
   },
   {
     id:3,
@@ -50,6 +56,7 @@ export const data = [
     currency: 115 ,
     count: 0,
     totalCurrency: 0,
+    littleImg: myasa ,
   },
   {
     id:4,
@@ -60,9 +67,10 @@ export const data = [
     text: "Идеальное решение для легкого и быстрого маринада мяса, можно добавить капельку масла и после приготовления. ",
     compound: "Состав: оливковое масло холодного отжима, розмарин, тимьян, базилик, орегано, чеснок, смесь из 5 перцев.",
     liter: "250 мл",  
-    currency: 115 ,
+    currency: 115,
     count: 0,
     totalCurrency: 0,
+    littleImg: vostoch,
   }
 ]
 
@@ -112,16 +120,7 @@ function ContextProvider({children}) {
   }
   console.log(basket);
 
-  if (color === 1) {
-    document.documentElement.dataset.theme = "idone"
-  }else if (color === 2) {
-    document.documentElement.dataset.theme = "idtwo"
-  }else if (color === 3) {
-    document.documentElement.dataset.theme = "idthree"
-  }else if (color === 4) {
-    document.documentElement.dataset.theme = "idfour"
-  }
-  
+
 
 
   function clearNumber(itemId) {

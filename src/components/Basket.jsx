@@ -30,7 +30,7 @@ function Basket() {
                                   </div>
 
                                   <div className="product__price">
-                                    <h4 className="product__price-total"> {item.totalCurrency = item.count * item.currency}</h4>
+                                    <h4 className="product__price-total"> {item.totalCurrency = item.count * item.currency} so`m</h4>
                                     <button className='product__close' onClick={()=> clearNumber(item.id)}><IoIosCloseCircleOutline /></button>
 
                                   </div>
@@ -39,6 +39,30 @@ function Basket() {
 
                             </div>
                           ))}
+
+
+
+                          <div className="basket__info">
+                                  <div className="basket__left">
+                                      <div className="basket__left-box">
+                                        <span>Имя получателя</span>
+                                        <input 
+                                        type="text"  
+                                        placeholder='Фамилия Имя Отчество'
+                                        className='basket__left-input'/>
+                                      </div>
+                                      <div className="basket__left-box">
+                                        <span>Контактный номер телефона</span>
+                                        <input 
+                                        type="text"  
+                                        placeholder='+998 '
+                                        className='basket__left-input'/>
+                                      </div>
+                                  </div>
+                                  <div className="basket__right">
+asa
+                                  </div>
+                          </div>
 
 
                           

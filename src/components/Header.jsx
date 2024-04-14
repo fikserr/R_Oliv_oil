@@ -12,14 +12,24 @@ import { Context } from "../context/Context";
 
 function Header() {
   
-  const {totalCount,basket,SetColor} = useContext(Context)
+  const {totalCount,basket,SetColor,color} = useContext(Context)
 
      function handler(swiper) {
       const activeItem = basket[swiper.activeIndex];
       SetColor(activeItem.id); 
-      
   }
 
+
+  if (color === 1) {
+    document.documentElement.dataset.theme = "idone"
+  }else if (color === 2) {
+    document.documentElement.dataset.theme = "idtwo"
+  }else if (color === 3) {
+    document.documentElement.dataset.theme = "idthree"
+  }else if (color === 4) {
+    document.documentElement.dataset.theme = "idfour"
+  }
+  
 
   
   
