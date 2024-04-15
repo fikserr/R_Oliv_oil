@@ -364,7 +364,7 @@ header{
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        border-bottom: 1px solid rgb(104, 136, 0);
+
        
         .products__name-liter{
             display: none;
@@ -626,6 +626,125 @@ header{
         }
     }
 }
+
+
+
+.about{
+
+    padding-bottom: 50px;
+
+    &__content{
+        display: flex;
+        padding-top: 40px;
+        position: relative;
+        height: 405px;
+        margin-bottom: 30px;
+    
+    }
+    &__title{
+        color: rgb(74, 74, 74);
+        font-family: Amatic SC;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 61px;
+        text-align: center;
+    }
+
+    &__square{
+        width: 195px;
+        height: 357px;
+        background: rgb(104, 136, 0);
+        opacity: 0.4;
+        margin-top: 48px;
+        &.active{
+            right: 0;
+            position: absolute;
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 528px;
+        height: 357px;
+        left: 85px;
+        z-index: 2;
+        &.active{
+            left: 890px;
+
+        }
+ 
+    }
+    &__txt{
+        position: absolute;
+        margin-top: 48px;
+        width: 922px;
+        height: 357px;
+        box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
+        background: rgb(255, 255, 255);
+        padding: 24px;
+        z-index: 3;
+        right: 0;
+        &.active{
+            left: 0;
+        }
+       
+
+        &-title{
+            color: rgb(74, 74, 74);
+            font-family: Amatic SC;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 40px;
+            text-align: left;
+        }
+        &-text{
+            color: rgb(74, 74, 74);
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: left;
+            padding-top: 16px;
+        }
+    }
+}
+
+.reviews{
+    padding-bottom: 80px;
+    &__title{
+        color: rgb(74, 74, 74);
+        font-family: Amatic SC;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 61px;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    &__img {
+        display: block;
+        width: 487px;
+        height: 669px;
+        object-fit: cover;
+      }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    &-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: space-between;
+
+       
+    
+      }
+  }
+
+  
 
 
 .swiper-button-prev, .swiper-button-next{
