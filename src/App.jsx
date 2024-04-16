@@ -7,8 +7,9 @@ import Home from './pages/Home';
 import OilCard from './pages/OilCard';
 import Reviews from './pages/Reviews';
 import PaymentDelivery from './pages/PaymentDelivery';
-import './style.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 
 
 
