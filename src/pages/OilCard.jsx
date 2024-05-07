@@ -4,11 +4,11 @@ import Card from "../components/Card"
 
 
 function OilCard() {
-  const {basket} = useContext(Context)
+  const {basket,active} = useContext(Context)
 
 
   return (
-    <div className='oil'>
+    <div className={` oil ${active ? "active" : ""}`}>
         <div className="container">
           <h1 className="oil__title">Масло</h1>
           <div className="oil__cards">

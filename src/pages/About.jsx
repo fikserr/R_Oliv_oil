@@ -1,9 +1,13 @@
+import { useContext } from "react"
+import { Context } from "../context/Context"
 import family from "../img/family.jpg"
 import oils from "../img/oils.jpg"
 
 function About() {
+  const {active} = useContext(Context)
+
   return (
-    <div className="about">
+    <div className={` about ${active ? "active" : ""}`}>
 
       <div className="container">
             <h1 className="about__title">О нас</h1>

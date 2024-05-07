@@ -4,7 +4,7 @@ import { Context } from "../context/Context"
 
 
 function Card({data}) {
-    const {totalCount} = useContext(Context)
+    const {totalCount,setActive,active} = useContext(Context)
     const [color,setColor] = useState(0)
     if (color === 1) {
         document.documentElement.dataset.theme = "idone"
@@ -17,12 +17,12 @@ function Card({data}) {
       }
 
   return (
-    <div className="card " onChange={()=>setColor(data.id)}  >
+    <div className={` card ${active ? "active" : ""}`} onChange={()=>setColor(data.id)}  >
             <div className="card__img-box">
                 <img src={data.littleImg} alt="image" />
             </div>
             <h5 className="card__title">{data.title}</h5>
-            <p className="card__text">{data.text}</p>
+            <p className="card__text-one">{data.text}</p>
             <p className="card__text">{data.compound}</p>
 
 
@@ -42,7 +42,7 @@ function Card({data}) {
             </div>
 
             <div className="card__button">
-                <button>В КОРЗИНУ</button>
+                <button onClick={()=>setActive(true)}>В КОРЗИНУ</button>
                 <button>ЗАКАЗАТЬ В ТГ</button>
             </div>
 

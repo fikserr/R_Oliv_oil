@@ -482,6 +482,9 @@ header{
 
 .oil{
     padding-bottom: 80px;
+    &.active{
+        display: none;
+    }
     &__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;
@@ -505,6 +508,9 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    &.active{
+        display: none;
+    }
     &__img-box{
         width: 252px;
         height: 252px;
@@ -525,6 +531,7 @@ header{
        
     }
     &__title{
+
         color: var(--productTitle);
         font-family: Amatic SC;
         font-size: 24px;
@@ -533,7 +540,11 @@ header{
         text-align: start;
         padding-top: 16px;
     }
+    &__text-one{
+        height: 80px;
+    }
     & p{
+        
         color: rgb(74, 74, 74);
         font-family: Roboto;
         font-size: 14px;
@@ -545,6 +556,7 @@ header{
     }
     &__info{
         display: flex;
+        height: 48px;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -633,7 +645,9 @@ header{
 .about{
 
     padding-bottom: 50px;
-
+    &.active{
+        display: none;
+    }
     &__content{
         display: flex;
         padding-top: 40px;
@@ -711,6 +725,9 @@ header{
 
 .reviews{
     padding-bottom: 80px;
+    &.active{
+        display: none;
+    }
     &__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;
@@ -731,7 +748,9 @@ header{
 .swiper {
     width: 100%;
     height: 100%;
- 
+    &.active{
+        display: none;
+    }
     &-slide {
         background: #fff;
         display: flex;

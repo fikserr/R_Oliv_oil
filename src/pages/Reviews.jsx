@@ -9,12 +9,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Context } from "../context/Context";
+import { useContext } from "react";
 
 
 
 function Reviews() {
+  const {active} = useContext(Context)
+
   return (
-    <div className='reviews container'>
+    <div className={` reviews container ${active ? "active" : ""}`}>
       <h1 className="reviews__title">Отзывы</h1>
 
       <Swiper
