@@ -1,0 +1,84 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 267px;
+    background:transparent;
+    &__circle{
+        width: 316px;
+        height: 316px;
+        background-color: rgb(125, 160, 12);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -49px;
+    }
+    &__circle-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        gap: 88px;
+    }
+    &__link{
+        text-decoration: none;
+        color: rgb(104, 136, 0);
+        font-family: El Messiri;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: center;
+        transition: 0.5s;
+        &.active{
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            background: rgb(104, 136, 0);
+        }
+    }
+    &__basket{
+        display: flex;
+        position: relative;
+        .menu{
+            display: none;
+            color: rgb(104, 136, 0);
+            font-size: 40px;
+            &.active{
+                display: block;
+            }
+        }
+
+        .basket__right{
+            color: rgb(104, 136, 0);
+            font-size: 40px;
+
+            
+        }
+        .basket__number{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                font-family: var(--Roboto);
+                font-size: 16px;
+                line-height: 19px;
+                position: absolute;
+                top: -15px;
+                right: 0;
+                &.active{
+                    width: 24px;
+                    height: 24px;
+                    background-color: rgb(215, 58, 49);
+                    border-radius: 15px;
+                    color: white;
+                }
+            }
+    }
+
+}

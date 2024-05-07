@@ -1,6 +1,6 @@
 
-import Basket from '../components/Basket'
-import Navbar from '../components/Navbar'
+import Basket from '../components/basket'
+import Navbar from '../components/navbar'
 import { Outlet } from 'react-router-dom'
 
 
