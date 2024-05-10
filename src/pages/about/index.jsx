@@ -5,11 +5,12 @@ import oils from "../../img/oils.jpg"
 import styles from './about.module.scss'
 import Container from "../../container"
 
+
 function About() {
   const {active} = useContext(Context)
 
   return (
-    <div className={`${styles.about} ${active ? "active" : ""}`}>
+    <div className={`${styles.about} ${active ? styles.active : ""}`}>
 
           <Container>
                     <h1 className={styles.about__title}>О нас</h1>
@@ -30,9 +31,9 @@ function About() {
 
 
                       <div className={styles.about__content }>
-                        <div className={styles.about__square }></div>
-                        <img src={oils} alt="image" className={styles.about__img}/>
-                        <div className={styles.about__txt}>
+                        <div className={styles.about__square_right}></div>
+                        <img src={oils} alt="image" className={styles.about__img_right }/>
+                        <div className={styles.about__txt_right}>
                           <h3 className={styles.about__txt_title}>Что мы делаем</h3>
                           <p className={styles.about__txt_text}>И мы решили сделать такое масло, как добавление к подарку. Надо сказать, что наши близкие оценили презент и просили снова и снова сделать им такое масло.
                       И появилась идея: почему бы не попробовать запустить такое масло в продажу?Рома долго выверял рецепты, я разрабатывала дизайн этикеток и искала поставщиков. 

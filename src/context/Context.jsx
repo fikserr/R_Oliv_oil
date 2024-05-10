@@ -97,7 +97,7 @@ function ContextProvider({children}) {
           return { ...item, count: item.count - 1 };
         }
       }
-      
+      console.log(active);
       return item;
     });
 

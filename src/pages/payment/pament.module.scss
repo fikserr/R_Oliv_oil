@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
 
-
-
     .delivery__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;
@@ -17,25 +15,22 @@
         position: relative;
         width: 50%;
         height: 123px;
-        align-items: center;
         padding: 24px 24px 19px 0;;
         box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
         background: rgb(237, 244, 210);
-        
-        .container{
-            display: flex;
-            justify-content: flex-end;
+
             .delivery__img{
-                position: relative;
+                position: absolute;
                 top: 53px;
 
             }
-        }
+
       
 
         &__box{
             display: flex;
             gap: 64px;
+            justify-content: flex-end;
             .box{
                 row-gap: 16px;
                 display: flex;
@@ -87,18 +82,15 @@
         padding: 24px 0px 19px 24px;
         box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
         background: rgb(237, 244, 210);
-        
-        .container{
-            display: flex;
-            justify-content: start;
+    
 
             .payment__img{
-                position: relative;
+                position: absolute;
                 top: -200px;
-
+                right: 0;
                 
             }
-        }
+
       
 
         &__box{

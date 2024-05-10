@@ -8,7 +8,7 @@ import Footer from '../../components/footer/'
 
 function Home() {
   return (
-    <div>
+    <>
         <Header/>
         <OilCard/>
         <About/>
@@ -17,7 +17,7 @@ function Home() {
         <Contacts/>
         <Footer/>
 
-    </div>
+    </>
   )
 }
 

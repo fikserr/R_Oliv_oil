@@ -5,11 +5,18 @@ import styles from './card.module.scss'
 
 function Card({data}) {
     const {totalCount,setActive,active} = useContext(Context)
-
-
+    if (data.id === 1) {
+      document.documentElement.dataset.card = "idone"
+    }else if (data.id === 2) {
+      document.documentElement.dataset.card = "idtwo"
+    }else if (data.id === 3) {
+      document.documentElement.dataset.card = "idthree"
+    }else if (data.id) {
+      document.documentElement.dataset.card = "idfour"
+    }
 
   return (
-    <div className={`${styles.card} ${active ? "active" : ""}`} onChange={()=>setColor(data.id)}  >
+    <div className={`${styles.card} ${active ? styles.active : ""}`}  >
             <div className={styles.card__img_box}>
                 <img src={data.littleImg} alt="image" />
             </div>

@@ -1,7 +1,6 @@
-
-import Basket from '../components/basket'
-import Navbar from '../components/navbar'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../components/navbar'
+import Basket from '../components/basket'
 
 
 function HomeLayout() {

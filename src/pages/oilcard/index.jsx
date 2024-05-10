@@ -9,12 +9,13 @@ function OilCard() {
 
 
   return (
-    <div className={`${styles.oil} ${active ? "active" : ""}`}>
+    <div className={`${styles.oil} ${active ? styles.active : ""}`}>
          <Container>
           <h1 className={styles.oil__title}>Масло</h1>
             <div className={styles.oil__cards}>
               {
-                basket.map(item=>(
+                basket.map(item=>(  
+
                   <Card key={item.id} data={item} />
                 ))
               }

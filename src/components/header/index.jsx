@@ -1,4 +1,3 @@
-import Container from '../../container';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -6,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import styles from './header.module.scss'
+import Container from '../../container';
 
 
 
@@ -57,10 +57,10 @@ function Header() {
                                   <div className={styles.header__info_right}>
                                     <h2 className={styles.product__title}>{item.productTitle}</h2>
                                       <div className={styles.header__btn}>
-                                          <button className={`${styles.header__btn_txt} ${item.id == 1 ? "active " : ""}`}>Для салата</button>
-                                          <button className={`${styles.header__btn_txt} ${item.id == 2 ? "active" : ""}`}>Итальянское</button>
-                                          <button className={`${styles.header__btn_txt} ${item.id == 3 ? "active" : ""}`}>Для мяса</button>
-                                          <button className={`${styles.header__btn_txt} ${item.id == 4 ? "active" : ""}`}>Восточное</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 1 ? styles.active : ""}`}>Для салата</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 2 ? styles.active : ""}`}>Итальянское</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 3 ? styles.active : ""}`}>Для мяса</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 4 ? styles.active : ""}`}>Восточное</button>
                                       </div>
                                     <h1 className={styles.header__title}>{item.title}</h1>
                                     <p className={styles.header__text}>{item.text}</p>

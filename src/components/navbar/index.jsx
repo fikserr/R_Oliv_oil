@@ -1,9 +1,9 @@
-import { useContext } from "react";
 import Logo from "../../img/logo.png"
 import { BsBasket } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
-import { Context } from "../../context/Context";
 import {  NavLink } from "react-router-dom"
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 import styles from './navbar.module.scss'
 import Container from "../../container";
 
@@ -32,7 +32,7 @@ function Navbar() {
                                                     </div>
                                                 <div>
                                                     <p className={styles.basket__right}><BsBasket/></p>
-                                                    <div className={`${styles.basket__number} ${sonlar > 0 ? "active" : ""}`}>{sonlar}</div>
+                                                    <div className={`${styles.basket__number} ${sonlar > 0 ? styles.active : ""}`}>{sonlar}</div>
 
                                                     </div>
                                                 </div>

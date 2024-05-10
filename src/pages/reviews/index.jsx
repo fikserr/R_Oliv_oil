@@ -18,7 +18,7 @@ function Reviews() {
   const {active} = useContext(Context)
 
   return (
-    <div className={`${styles.reviews} ${active ? "active" : ""}`}>
+    <div className={`${styles.reviews} ${active ? styles.active : ""}`}>
       <h1 className={styles.reviews__title}>Отзывы</h1>
 
       <Swiper

@@ -27,10 +27,16 @@
         background: rgb(104, 136, 0);
         opacity: 0.4;
         margin-top: 48px;
-        &.active{
-            right: 0;
-            position: absolute;
-        }
+    }
+
+    &__square_right{
+        width: 195px;
+        height: 357px;
+        background: rgb(104, 136, 0);
+        opacity: 0.4;
+        margin-top: 48px;
+        right: 0;
+        position: absolute;
     }
     &__img{
         position: absolute;
@@ -38,11 +44,15 @@
         height: 357px;
         left: 85px;
         z-index: 2;
-        &.active{
-            left: 890px;
-
-        }
  
+    }
+
+    &__img_right{
+        position: absolute;
+        width: 528px;
+        height: 357px;
+        left: 890px;
+        z-index: 2;
     }
     &__txt{
         position: absolute;
@@ -57,6 +67,7 @@
         &.active{
             left: 0;
         }
+
        
 
         &_title{
@@ -77,4 +88,19 @@
             padding-top: 16px;
         }
     }
+
+
+    &__txt_right{
+        position: absolute;
+        margin-top: 48px;
+        width: 922px;
+        height: 357px;
+        box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
+        background: rgb(255, 255, 255);
+        padding: 24px;
+        z-index: 3;
+        left: 0;
+    
+    }
+ 
 }

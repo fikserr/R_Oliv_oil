@@ -1,161 +1,179 @@
-.basket__hover{
-    backdrop-filter: blur(25px);
-    background: rgba(21, 24, 21, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-    &.active{
-        display: flex;
-    }
-    
-}
-.basket{
-  
-    background: white;
-    padding: 56px;
+.basket__hover {
+  backdrop-filter: blur(25px);
+  background: rgba(21, 24, 21, 0.6);
+  display: none;
+
+  padding: 100px 0px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  &.active {
     display: flex;
-    flex-direction: column;
-    width: 1102px;
-    height: 1186px;
-    &__top{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__title{
-        color: rgb(74, 74, 74);
-        font-family: Amatic SC;
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 40px;
+  }
+}
+.basket {
+    margin: 0 auto;
+  background: white;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 1102px;
+  height: 1186px;
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: rgb(74, 74, 74);
+    font-family: Amatic SC;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  &__close {
+    font-size: 30px;
+    color: rgb(104, 136, 0);
+    background: transparent;
+    border: none;
+  }
+
+  &__num{
+    display: flex;
+    gap: 25px;
+    align-items:center;
+    .num{
+        color: var(--num);
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 32px;
         letter-spacing: 0%;
         text-align: center;
     }
-    &__close{
-        font-size: 30px;
-        color: rgb(104, 136, 0);
-        background: transparent;
-        border: none;
-    }   
-
-    &__products{
+    .minus, .plus{
+        width: 32px;
+        height: 32px;
+        padding: 0 9px;
+        border: 1px solid rgb(148, 148, 148);
+        border-radius: 8px;
+        opacity: 0.5;
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-       
-        .products__name_liter{
-            display: none;
-            gap: 16px;
-          
-            &.active{
-                display: flex;
-            }
-            .products__name{
-                color: rgb(104, 136, 0);
-                font-family: Roboto;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 16px;
-                letter-spacing: 0%;
-                text-align: left;
-            }
-            .products__liter{
-                color: rgb(74, 74, 74);
-                font-family: Roboto;
-                font-size: 12px;
-                font-weight: 300;
-                line-height: 14px;
-                letter-spacing: 0%;
-                text-align: left;
-            }
-        }
-        .product{
-            display: none;
-            justify-content: space-between;
-            align-items: center ;
-            width: 100%;
-            height: 154px;
-            padding: 16px 0;
-            &.active{
-                display: flex;
-            }
-            &__img{
-                width: 50px;
-            }
-            &__price{
-                display: flex;
-                justify-content: center;
-                gap: 32px;
-                align-items:center;
-                
-            }
-            &__price_total{
-                color: rgb(104, 136, 0);
-                font-family: Roboto;
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 170.23%;
-                letter-spacing: 0%;
-                text-align: right;
-            }
-            &__close{
-                font-size: 25px;
-                color: rgb(148, 148, 148);
-                background: transparent;
-                border: none;
-            }
-        }
-        
-
+        align-items:center;
+        font-size: 14px;
+        background: none;
     }
+}
+  &__products {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
+    .products__name_liter {
+      display: none;
+      gap: 16px;
 
+      &.active {
+        display: flex;
+      }
+      .products__name {
+        color: rgb(104, 136, 0);
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      .products__liter {
+        color: rgb(74, 74, 74);
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 14px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    .product {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 154px;
+      padding: 16px 5px;
+      border-radius: 16px;
+      &.active {
+        display: flex;
+        border: 1px solid var(--circleShadow);
+      }
+      &__img {
+        width: 50px;
+      }
+      
+      &__price {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        align-items: center;
+      }
+      &__price_total {
+        color: rgb(104, 136, 0);
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 170.23%;
+        letter-spacing: 0%;
+        text-align: right;
+      }
+      &__close {
+        font-size: 25px;
+        color: rgb(148, 148, 148);
+        background: transparent;
+        border: none;
+      }
+    }
+  }
 }
 
-
-.basket__info{
-    display: grid;
-    padding-top: 24px;
-    grid-template-columns: 2fr 1fr;
-    
-    
+.basket__info {
+  display: grid;
+  padding-top: 24px;
+  grid-template-columns: 2fr 1fr;
 }
 
-.basket__left{
+.basket__left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  &_box {
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
-    &_box{
-        display: flex;
-        flex-direction: column;
-        row-gap: 4px;
-        & span{
-            color: rgb(74, 74, 74);
-            font-family: Open Sans;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 22px;
-            text-align: left;
-        }
-        & input{
-            color: black;
-            font-family: Roboto;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            text-align: left;
-            border: 1px solid rgb(217, 217, 217);
-            border-radius: 4px;
-            background: rgb(255, 255, 255);
-            padding: 8px 16px;
-        }
+    row-gap: 4px;
+    & span {
+      color: rgb(74, 74, 74);
+      font-family: Open Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: left;
     }
+    & input {
+      color: black;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      border: 1px solid rgb(217, 217, 217);
+      border-radius: 4px;
+      background: rgb(255, 255, 255);
+      padding: 8px 16px;
+    }
+  }
 }
-
