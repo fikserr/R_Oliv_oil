@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import styles from './header.module.scss'
 import Container from '../../container';
-
+import './styles.css';
 
 
 

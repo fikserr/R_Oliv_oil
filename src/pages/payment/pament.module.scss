@@ -1,7 +1,7 @@
 .delivery__position{
     display: flex;
     align-items: center;
-
+   
     .delivery__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;
@@ -17,12 +17,12 @@
         height: 123px;
         padding: 24px 24px 19px 0;;
         box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
-        background: rgb(237, 244, 210);
+        background: var(--buttonTxt);
 
             .delivery__img{
                 position: absolute;
                 top: 53px;
-
+                
             }
 
       
@@ -65,7 +65,7 @@
     align-items: center;
     justify-content: end;
     flex-wrap: nowrap;
-
+    padding-bottom: 80px;
     .payment__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;
@@ -81,7 +81,7 @@
         height: 123px;
         padding: 24px 0px 19px 24px;
         box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
-        background: rgb(237, 244, 210);
+        background: var(--buttonTxt);
     
 
             .payment__img{

@@ -1,13 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=El+Messiri:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root[data-theme="idone"]{
+    --circleShadow:  #9cc71154;
+    --circleBack:  linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
+    --productTitle: rgb(104, 136, 0);
+    --buttonTxt:  rgb(191, 208, 135);
+    --activeButton: rgb(84, 107, 6);
+    --num: rgb(104, 136, 0);
+    --hoverLink: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
+}
+
+:root[data-theme="idtwo"]{
+    --circleShadow:  rgba(1, 250, 122, 0.322);
+    --circleBack:  linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
+    --productTitle: rgb(0, 146, 70);
+    --buttonTxt:  rgb(105, 212, 158);
+    --activeButton: rgb(17, 97, 55);
+    --num: rgb(0, 146, 70);
+    --hoverLink: linear-gradient(-39.42deg, rgb(7, 101, 52) 14.554%,rgb(0, 219, 105) 75.337%);
+}
+
+:root[data-theme="idthree"]{
+    --circleShadow:  rgba(245, 15, 3, 0.315);
+    --circleBack:  linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
+    --productTitle: rgb(215, 58, 49);
+    --buttonTxt: rgb(115, 18, 13);
+    --activeButton:rgb(232, 132, 126);
+    --num: rgb(215, 58, 49);
+    --hoverLink:linear-gradient(-38.95deg, rgb(153, 22, 14) 14.558%,rgb(232, 66, 57) 74.038%);
+}
+
+:root[data-theme="idfour"]{
+    --circleShadow: rgba(255, 132, 0, 0.404);
+    --circleBack:   linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%)  ;
+    --productTitle: rgb(230, 127, 16);
+    --buttonTxt: rgb(241, 167, 87);
+    --activeButton:rgb(189, 105, 13);
+    --num: rgb(230, 127, 16);
+    --hoverLink: linear-gradient(-35.60deg, rgb(186, 100, 0) 17.905%,rgb(255, 157, 52) 77.509%);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 
 

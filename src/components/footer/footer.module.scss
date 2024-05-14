@@ -1,0 +1,27 @@
+.footer{
+    background: rgb(114, 133, 54);
+    &__content{
+        height: 220px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &_links{
+            display: flex;
+            gap: 88px;
+            .nav__link{
+                text-decoration: none;
+                color: white;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
+        &_social{
+            display: flex;
+            gap: 36px;
+        }
+    }
+}

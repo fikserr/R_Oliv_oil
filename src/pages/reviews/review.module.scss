@@ -1,4 +1,5 @@
 .reviews{
+    
     padding-bottom: 80px;
     &.active{
         display: none;
@@ -18,29 +19,20 @@
         height: 669px;
         object-fit: cover;
       }
-}
 
-
-.swiper {
-    width: 100%;
-    height: 100%;
-
-    &-slide {
-        background: #fff;
-        display: flex;
-        justify-content: center;
-
-       
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
     
-      }
-  }
-
- 
-  
-
-
-.swiper-button-prev, .swiper-button-next{
-    color: rgb(104, 136, 0);
+    .swiper-button-prev, .swiper_button_next{
+        color: rgb(104, 136, 0);
+    }
+    
+    
 }
+
+
+
 
 

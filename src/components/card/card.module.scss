@@ -1,42 +1,3 @@
-:root[data-card="idone"]{
-    --circleCardShadow:  #9cc71154;
-    --circleCardBack:  linear-gradient(-39.21deg, rgb(83, 102, 20) 15.364%,rgb(151, 194, 11) 84.863%);
-    --productCardTitle: rgb(104, 136, 0);
-    --buttonCardTxt:  rgb(191, 208, 135);
-    --activeCardButton: rgb(84, 107, 6);
-    --numCard: rgb(104, 136, 0);
-    --hoverCardLink: linear-gradient(-39.21deg, rgb(83, 102, 20) 14.555%,rgb(151, 194, 11) 77.387%);
-}
-
-:root[data-card="idtwo"]{
-    --circleCardShadow:  rgba(1, 250, 122, 0.322);
-    --circleCardBack::  linear-gradient(-39.42deg, rgb(7, 101, 52) 15.36%,rgb(0, 219, 105) 82.231%);
-    --productCardTitle: rgb(0, 146, 70);
-    --buttonCardTxt:  rgb(105, 212, 158);
-    --activeCardButton: rgb(17, 97, 55);
-    --numCard: rgb(0, 146, 70);
-    --hoverCardLink: linear-gradient(-39.42deg, rgb(7, 101, 52) 14.554%,rgb(0, 219, 105) 75.337%);
-}
-
-:root[data-card="idthree"]{
-    --circleCardShadow:  rgba(245, 15, 3, 0.315);
-    --circleCardBack:  linear-gradient(-38.95deg, rgb(153, 22, 14) 15.373%,rgb(232, 66, 57) 81.984%);
-    --productCardTitle: rgb(215, 58, 49);
-    --buttonCardTxt: rgb(115, 18, 13);
-    --activeCardButton:rgb(232, 132, 126);
-    --numCard: rgb(215, 58, 49);
-    --hoverCardLink:linear-gradient(-38.95deg, rgb(153, 22, 14) 14.558%,rgb(232, 66, 57) 74.038%);
-}
-
-:root[data-card="idfour"]{
-    --circleCardShadow: rgba(255, 132, 0, 0.404);
-    --circleCardBack:   linear-gradient(324.18deg, #BA6400 14.36%, #FF9D34 85.34%)  ;
-    --productCardTitle: rgb(230, 127, 16);
-    --buttonCardTxt: rgb(241, 167, 87);
-    --activeCardButton:rgb(189, 105, 13);
-    --numCard: rgb(230, 127, 16);
-    --hoverCardLink: linear-gradient(-35.60deg, rgb(186, 100, 0) 17.905%,rgb(255, 157, 52) 77.509%);
-}
 .card{
     width: 360px;
     box-shadow: 10px 10px 35px 0px rgba(190, 191, 183, 0.1);
@@ -57,8 +18,8 @@
         align-items: center;
         transition: 0.5s;
         &:hover{
-            box-shadow: var(--circleCardShadow) 0px 0px 0px 18px ;
-            background: var(--circleCardBack);
+            box-shadow: var(--circleShadow) 0px 0px 0px 18px ;
+            background: var(--circleBack);
             transform: rotate(15deg);
             & img{
                 transition: 0.5s;
@@ -69,7 +30,7 @@
     }
     &__title{
         width: 100%;
-        color: var(--productCardTitle);
+        color: var(--productTitle);
         font-family: Amatic SC;
         font-size: 24px;
         font-weight: 700;
@@ -104,7 +65,7 @@
             align-items:center;
             
             .num{
-                color: var(--numCard);
+                color: var(--num);
                 font-family: Roboto;
                 font-size: 24px;
                 font-weight: 500;
@@ -140,7 +101,7 @@
             text-align: center;
         }
         .card__price{
-            color: var(--productCardTitle);
+            color: var(--productTitle);
             font-family: Roboto;
             font-size: 24px;
             font-weight: 500;
@@ -156,7 +117,7 @@
         justify-content: space-between;
         padding-top: 26px;
         & button{
-            color: var(--productCardTitle);
+            color: var(--productTitle);
             font-family: Roboto;
             font-size: 14px;
             font-weight: 500;
@@ -164,12 +125,12 @@
             text-align: center;
             padding: 0 16px;
             box-sizing: border-box;
-            border: 1px solid var(--circleCardShadow);
+            border: 1px solid var(--circleShadow);
             border-radius: 50px;
             background: transparent;
             width: 146px;
             &:hover{
-                background: var(--hoverCardLink);;
+                background: var(--hoverLink);;
                 color: white;
             }
 
