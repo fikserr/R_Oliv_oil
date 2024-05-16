@@ -75,27 +75,7 @@ function Basket() {
               </div>
             ))}
 
-            <div className={styles.basket__info}>
-              <div className={styles.basket__left}>
-                <div className={styles.basket__left_box}>
-                  <span>Имя получателя</span>
-                  <input
-                    type="text"
-                    placeholder="Фамилия Имя Отчество"
-                    className={styles.basket__left_input}
-                  />
-                </div>
-                <div className={styles.basket__left_box}>
-                  <span>Контактный номер телефона</span>
-                  <input
-                    type="text"
-                    placeholder="+998 "
-                    className={styles.basket__left_input}
-                  />
-                </div>
-              </div>
-              <div className={styles.basket__right}></div>
-            </div>
+
           </div>
         </Container>
       </div>
