@@ -2,5 +2,21 @@
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
-
+   
+}
+@media screen and (max-width: 1366px) {
+    .container {
+        max-width: 1066px;
+        
+    } 
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 688px;
+    } 
+}
+@media screen and (max-width: 320px) {
+    .container {
+        max-width: 280px;
+    } 
 }

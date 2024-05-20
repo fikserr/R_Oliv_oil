@@ -40,14 +40,18 @@ function Header() {
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper" onSlideChange={handler}>
               {basket.map(item => (
                 <SwiperSlide className={styles.header} key={item.id} >
-                  
-
-                 
-                
-
                             <div className={styles.header__content} >
                                 
                                   <div className={styles.header__imgs_left}>
+                                    <div className={styles.header__imgs_left_btn}>
+                                    <h2 className={styles.product__title_img}>{item.productTitle}</h2>
+                                      <div className={styles.header__btn}>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 1 ? styles.active : ""}`}>Для салата</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 2 ? styles.active : ""}`}>Итальянское</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 3 ? styles.active : ""}`}>Для мяса</button>
+                                          <button className={`${styles.header__btn_txt} ${item.id == 4 ? styles.active : ""}`}>Восточное</button>
+                                      </div>
+                                    </div>
                                     <div className={styles.oil__circle} ><img src={item.oilImg} alt="" className={styles.header__img_oil}/></div>
                                     
                                     <img src={item.fruit} alt="" className={styles.header__img_fruit }/>

@@ -14,7 +14,7 @@ function Navbar() {
             <nav className={styles.navbar}>
                <Container>
                 <div className={styles.nav}>
-                                <NavLink to="/" className={styles.nav__circle}><img src={Logo} alt="image" className="nav__circle-logo"/></NavLink>
+                                <NavLink to="/" className={styles.nav__circle}><img src={Logo} alt="image" className={styles.nav__circle_logo}/></NavLink>
                                 
                                     <div className={styles.nav__links}>
 
@@ -26,12 +26,12 @@ function Navbar() {
                                     </div>
                                             
 
-                                            <div className={styles.nav__basket} onClick={()=>setActive(true) }>
+                                            <div className={styles.nav__basket} >
                                                     <div className={styles.menu}>
                                                         <div><IoMenu /></div>
                                                     </div>
                                                 <div>
-                                                    <p className={styles.basket__right}><BsBasket/></p>
+                                                    <button className={styles.basket__right} onClick={()=>setActive(true) }><BsBasket/></button>
                                                     <div className={`${styles.basket__number} ${sonlar > 0 ? styles.active : ""}`}>{sonlar}</div>
 
                                                     </div>

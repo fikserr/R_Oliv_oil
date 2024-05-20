@@ -3,6 +3,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useContext } from "react";
 import styles from "./basket.module.scss";
 import Container from "../../container";
+import Order from "../order";
 
 function Basket() {
   const { totalCount, basket, active, setActive, clearNumber } =
@@ -74,7 +75,7 @@ function Basket() {
                 </div>
               </div>
             ))}
-
+                <Order/>
 
           </div>
         </Container>

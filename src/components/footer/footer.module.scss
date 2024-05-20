@@ -1,4 +1,7 @@
 .footer{
+    &.active{
+        display: none;
+    }
     background: rgb(114, 133, 54);
     &__content{
         height: 220px;
@@ -24,4 +27,52 @@
             gap: 36px;
         }
     }
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .footer {
+        &__content{
+            &_links{
+                gap: 40px;
+                
+            }
+            &_social{
+                gap: 24px;
+            }
+        }
+        
+    } 
+}
+@media screen and (max-width: 768px) {
+    .footer {
+       &__content{
+        padding: 40px 0;
+        height: 304px;
+        flex-direction: column;
+        &_img{
+            height: 86px;
+        }
+        &_social{
+            gap: 32px;
+        }
+       }
+    } 
+}
+@media screen and (max-width: 320px) {
+    .footer {
+        &__content{
+         padding: 40px 0;
+         height: 440px;
+         flex-direction: column;
+        &_links{
+            flex-direction: column;
+            gap: 16px;
+            .nav__link{
+                font-size: 14px;
+            }
+        }
+        }
+     } 
 }

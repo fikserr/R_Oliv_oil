@@ -118,7 +118,6 @@ function ContextProvider({children}) {
      
     
   }
-  console.log(basket);
 
 
 

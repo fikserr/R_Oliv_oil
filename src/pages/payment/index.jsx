@@ -8,11 +8,14 @@ import credit from '../../img/credit.svg'
 import coins from '../../img/coins.svg'
 import Container from '../../container'
 import styles from './pament.module.scss'
+import { useContext } from 'react'
+import { Context } from '../../context/Context'
 
 function PaymentDelivery() {
+  const {active} = useContext(Context)
   return (
-
-    <div className={styles.paymentdelivery}>
+    
+    <div className={`${styles.paymentdelivery} ${active ? styles.active : ""}`}>
         <div className={styles.delivery__position}>
                 <div className={styles.delivery}>
                         <Container>

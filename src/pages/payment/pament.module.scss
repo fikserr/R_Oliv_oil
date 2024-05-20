@@ -1,7 +1,15 @@
+.paymentdelivery{
+    &.active{
+        display: none;
+    }
+}
+
 .delivery__position{
     display: flex;
     align-items: center;
-   
+    &.active{
+        display: none;
+    }
     .delivery__title{
         color: rgb(74, 74, 74);
         font-family: Amatic SC;

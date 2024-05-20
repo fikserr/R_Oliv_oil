@@ -1,4 +1,7 @@
 .contacts {
+  &.active{
+    display: none;
+}
   &__title {
     color: rgb(74, 74, 74);
     font-family: Amatic SC;

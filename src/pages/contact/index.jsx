@@ -6,9 +6,12 @@ import facebook from '../../img/facebook.svg'
 import instagram from '../../img/instagram.svg'
 import telegram from '../../img/telegram.svg'
 import viber from '../../img/viber.svg'
+import { Context } from '../../context/Context'
+import { useContext } from 'react'
 function Contacts() {
+  const {active} = useContext(Context)
   return (
-    <div className={styles.contacts}>
+    <div className={`${styles.contacts} ${active ? styles.active : ""}`}>
       <Container>
            <h1 className={styles.contacts__title}>Контакты</h1>
 

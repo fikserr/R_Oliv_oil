@@ -6,9 +6,12 @@ import whiteFacebook from '../../img/whitefacebook.svg'
 import whiteInstagram from '../../img/whiteinstagram.svg'
 import whiteTelegram from '../../img/whitetelegram.svg'
 import whiteViber from '../../img/whiteviber.svg'
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 function Footer() {
+  const {active} = useContext(Context)
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${active ? styles.active : ""}`}>
       <Container>
         <div className={styles.footer__content}>
           <img src={Logo} alt="logo"  className={styles.footer__content_img}/>

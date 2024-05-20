@@ -1,7 +1,4 @@
 
-
-
-
 head{
     position: relative;
 }
@@ -23,6 +20,44 @@ head{
     }
     &__imgs_left{
         position: relative;
+        &_btn{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            .product__title_img{
+                color: var(--buttonTxt);
+                font-family: Amatic SC;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 45px;
+                text-align: center;
+            }
+            .header__btn{
+                display: flex;
+               
+                &_txt{
+                    height: 40px;
+                    width: 143px;
+                    color: var(--buttonTxt);
+                    font-family: Roboto;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: center;
+                    padding: 9px 16px;
+                    border: 1px solid var(--buttonTxt);
+                    background: none;
+                    margin-bottom: 40px;
+                    &.active{
+                        background: var(--buttonTxt);
+                        color: var(--activeButton);
+                    }
+                }
+            }
+            
+        }
         .oil__circle{
             border-radius: 50%;
             width: 481px;
@@ -59,7 +94,6 @@ head{
             font-size: 36px;
             font-weight: 700;
             line-height: 125%;
-            letter-spacing: 0%;
             text-align: left;
             padding-bottom: 33px;
             }
@@ -69,12 +103,13 @@ head{
         display: flex;
         gap: 40px;
         .header__btn_txt{
+            height: 40px;
+            width: 143px;
             color: var(--buttonTxt);
             font-family: Roboto;
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
-            letter-spacing: 0%;
             text-align: center;
             padding: 9px 16px;
             border: 1px solid var(--buttonTxt);
@@ -93,7 +128,6 @@ head{
         font-size: 64px;
         font-weight: 400;
         line-height: 125%;
-        letter-spacing: 0%;
         text-align: left;
         padding-bottom: 32px;
     }
@@ -103,7 +137,6 @@ head{
         font-size: 18px;
         font-weight: 300;
         line-height: 24px;
-        letter-spacing: 0%;
         text-align: left;
         padding-bottom: 32px;
     }
@@ -117,7 +150,6 @@ head{
             font-size: 24px;
             font-weight: 500;
             line-height: 32px;
-            letter-spacing: 0%;
             text-align: center;
         }
         .minus, .plus{
@@ -165,4 +197,122 @@ head{
  
 
 
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .header {
+        height: 504px;
+
+        &__imgs_left{
+            .oil__circle{
+                width: 340px;
+                height: 340px;
+                box-shadow: var(--circleShadow) 0px 0px 0px 26px ;
+            }
+            .header__img_oil{
+                height: 456px;
+                top: -80px;
+                left: 97px;
+            }
+            .header__img_fruit{
+                position: absolute;
+                top: 211px;
+                left: 177px;
+                z-index: 2;
+                width: 188.6px;
+                height: 183.39px;
+            }
+        }
+        .header__info_right{
+            padding-left: 64px;
+        }
+
+        &__btn{
+            gap: 8px;
+           
+      
+        }
+
+    } 
+}
+@media screen and (max-width: 768px) {
+    .header {
+        height: 871px;
+        &__content{
+            flex-direction: column;
+            justify-content: end;
+            height: 100%;
+        }
+        &__imgs_left{
+            height: 683px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            &_btn{
+            display: flex;
+            }   
+            .header__img_oil{
+                position: absolute;
+                height: 456px;
+                top: 96px;
+                left: 214px;
+            }
+            .header__img_fruit{
+                top: 367px;
+                left: 300px;
+                z-index: 2;
+            }
+        }
+        .header__info_right{
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            height: 240px;
+            position: relative;
+            top: -50px;
+            
+            .product__title{
+                display: none;
+                
+            }
+        }
+
+        &__btn{
+            display: none;
+          
+        }
+        &__title{
+            font-size: 48px;
+            text-align: center;
+            padding-bottom: 8px;
+        }
+        &__text{
+            font-size: 16px;
+            text-align: center;
+
+
+        }
+
+
+    }  
+}
+@media screen and (max-width: 320px) {
+    .header{
+        &__content{
+            .oil__circle{
+                width: 240px;
+                height: 240px;
+                box-shadow: var(--circleShadow) 0px 0px 0px 19px ;
+            }
+        }
+        &__imgs_left_btn{
+            .header__btn{
+                display: none;
+            }
+        }
+        
+    }
 }

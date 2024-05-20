@@ -1,3 +1,223 @@
 .order{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    padding-top: 24px;
+    &__form{
+        display: flex;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &_info{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
+            & span{
+                color: rgb(74, 74, 74);
+                font-family: Open Sans;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: left;
+            }
+            & input{
+                width: 486px;
+                height: 40px;
+                padding: 8px 16px;
+                color: rgb(191, 191, 191);
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                border: 1px solid rgb(217, 217, 217);
+                border-radius: 4px;
+                background: white;
+            }
+        }
+        &_deliver{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            &_title{
+            color: rgb(74, 74, 74);
+            font-family: Open Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+            
+            }
+            & div{
+                display: flex;
+                gap: 15px;
+            }
+            &_radio{
+                display: flex;
+                align-items: center;
+                gap: none;
+                & label{
+                    color: rgb(74, 74, 74);
+                    font-family: Open Sans;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    text-align: left;
+                    
+                }
+            }
+        }
+        &_newMail{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &_text{
+                color: rgb(74, 74, 74);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: left;
+                
+            }
+            &_input,&_comment{
+                width: 486px;
+                height: 40px;
+                padding: 8px 16px;
+                color: rgb(191, 191, 191);
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                border: 1px solid rgb(217, 217, 217);
+                border-radius: 4px;
+                background: white;
+            }
+            &_comment{
+                width: 612px;
+                height: 120px;
+                margin-top: 64px;
+            }
+        }
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 10px;
+        &_payment{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &_title{
+                color: rgb(74, 74, 74);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: left;
+            }
+            &_label{
+                display: flex;
+                gap: 30px;
+                & label{
+                    display: flex;
+                    align-items: center;
+                    color: rgb(74, 74, 74);
+                    font-family: Open Sans;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    text-align: left;
+                    & input{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            &_active{
+                display: none;
+                gap: 30px;
+                &.active{
+                    display: flex;
+                }
+                & label{
+                    font-size: 30px;
+                    display: flex;
+                    align-items: center;
+                    & input{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            
+        }
+
+        &_mail{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &_title{
+                color: rgb(74, 74, 74);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: left;
+            }
+            &_inputs{
+             display: flex;
+             flex-wrap: wrap;
+             gap: 24px;
+   
+            }
+            &_input_width,&_input,&_input_bottom{
+                padding: 16px;
+                border: 1px solid rgb(217, 217, 217);
+                border-radius: 4px;
+                background: rgb(255, 255, 255);
+                width: 217px;
+                height: 40px;
+                color: rgb(191, 191, 191);
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+            }
+            &_input_width{
+                width: 127px;
+            }
+            &_input_bottom{
+                width: 100%;
+            }
+
+            &_btn{
+                height: 48px;
+                padding: 8px;
+                color: rgb(104, 136, 0);
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 32px;
+                text-align: center;
+                border: 1px solid var(--productTitle);
+                border-radius: 50px;
+                transition: 0.5s;
+                background: transparent;
+                &:hover{
+                    background: var(--activeButton);
+                    color: white;
+                }
+            }
+        }
+        
+    }
 }
+
+
+
